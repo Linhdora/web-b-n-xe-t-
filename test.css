@@ -1,0 +1,149 @@
+/*TẠO THANH NGANG GIỚI THIỆU CÁC VỊ TRÍ */
+.fixed {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /*dảm bảo header luôn ở trên cùng*/
+}
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #131550;
+}
+.tabcontent {
+  color:#000407;
+  display: none;
+  padding: 50px;
+  text-align: center;
+  margin-top: 0px; /* nếu header fixed */
+}
+.overplay{
+
+}
+#Gioithieuchung {
+  background-image:url("Assets/image/gioithieuchung.jpg"); 
+  display:block;
+  min-height: 250px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+#Lichsuhinhthanh {
+  background-image:url("Assets/image/lichsuhinhthanh.jpg");
+  overflow:hidden;
+  min-height: 250px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+#Sanpham {
+  background-image:url("Assets/image/sanpham.jpg");
+  overflow:hidden;
+  min-height: 250px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+#Tuyendung {
+  background-image:url("Assets/image/tuyendung.jpg");
+  overflow:hidden;
+  min-height: 250px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Clear float */
+header::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+/*Test chương trình cũ */
+.tabcontent {
+  width: 75%;
+  height: 500px;
+  margin: 50px auto;
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ffffff;
+  border-radius: 10%;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Bóng mờ */
+}
+header > div > h1{
+  margin: 200px auto 20px auto;
+  position: relative;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  z-index: 2; /* chữ hiện trên lớp overlay */
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* bóng mờ chữ */
+  font-weight: 500;
+}
+header > div > p{
+  margin: 0 auto auto auto;
+  padding: 0;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 2;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+#Gioithieuchung{
+  display: block;
+  border: none; 
+  background-image: url("Assets/image/gioithieuchung.jpg");
+  background-repeat: no-repeat;   /* không lặp ảnh */
+  background-size: cover; /* phủ kín khung */
+  background-position: center;    /* căn giữa ảnh */
+  position: relative;
+}
+
+#Sanpham{
+  border: none; 
+  background-image: url("Assets/image/sanpham1.jpg");
+  background-repeat: no-repeat;   /* không lặp ảnh */
+  background-size: cover; /* phủ kín khung */
+  background-position: center;    /* căn giữa ảnh */
+  position: relative;
+}
+
+#Dichvu{
+  border: none; 
+  background-image: url("Assets/image/dichvu.jpg");
+  background-repeat: no-repeat;   /* không lặp ảnh */
+  background-size: cover; /* phủ kín khung */
+  background-position: center;    /* căn giữa ảnh */
+  position: relative;
+}
+
+#Lienhe{
+  border: none; 
+  background-image: url("Assets/image/lienhe.jpg");
+  background-repeat: no-repeat;   /* không lặp ảnh */
+  background-size: cover; /* phủ kín khung */
+  background-position: center;    /* căn giữa ảnh */
+  position: relative;
+}
+
+

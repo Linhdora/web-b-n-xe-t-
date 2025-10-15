@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trang chủ - Xe Hơi Nhỏ</title>
+
+  <!-- Bootstrap & Font Awesome -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+  <link rel="stylesheet" href="global-style.css">
+  <link rel="stylesheet" href="variable.css">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<header>
+  <div class="container d-flex justify-content-between align-items-center">
+      <img src="Assets/image/logoxe.jpg" alt="Logo xe hơi nhỏ" height="50" weight="50">
+      <h1 class="h4 mb-0">Xe Hơi Nhỏ</h1>
+      <nav>
+        <a href="index.html" class="text-white me-3">Trang chủ</a>
+        <a href="src/product/product.html" class="text-white me-3">Sản phẩm</a>
+        <a href="src/service/service.html" class="text-white me-3">Dịch vụ</a>
+        <a href="src/about-us/about-us.html" class="text-white me-3">Về chúng tôi</a>
+        <a href="src/contact-us/contact-us.html" class="text-white">Liên hệ</a>
+      </nav>
+    </div>
+</header>    
+<div>
+      <button class="tablink" onclick="openCity('Gioithieuchung', this, 'red')" >Giới thiệu chung</button>
+      <button class="tablink" onclick="openCity('Lichsuhinhthanh', this, 'green')">Lịch sử hình thành</button>
+      <button class="tablink" onclick="openCity('Sanpham', this, 'blue')">Sản phẩm</button>
+      <button class="tablink" onclick="openCity('Tuyendung', this, 'orange')">Tuyển dụng</button>
+  </div>
+  <div id="Gioithieuchung" class="tabcontent">
+    <h1>Giới thiệu chung</h1>
+    <p>Website "Xe hơi nhỏ " là một nền tảng thương mại điện tử chuyên biệt, được thiết kế để kết nối người mua và người bán trong ngành công nghiệp xe hơi. Mục tiêu cốt lõi của website là trưng bày sản phẩm (các mẫu xe), cung cấp thông tin chi tiết và hỗ trợ quy trình giao dịch một cách thuận tiện, minh bạch.</p>
+  </div>
+  <div id="Lichsuhinhthanh" class="tabcontent">
+    <h1>Lịch sử hình thành </h1>
+    <p> Chúng tôi là "Xe hơi nhỏ", được thành lập từ năm 2015 với niềm đam mê mang những chiếc xe chất lượng đến tay người tiêu dùng Việt Nam.</p>
+    <p>Khởi đầu chỉ là một showroom nhỏ tại Sao Hỏa, chúng tôi đã không ngừng nỗ lực để xây dựng một thương hiệu vững mạnh dựa trên ba giá trị cốt lõi: Chất lượng sản phẩm, Giá cả minh bạch, và Dịch vụ hậu mãi tận tâm</p>
+    <p>Sau 10 năm phát triển, "Xe hơi nhỏ" tự hào trở thành điểm đến đáng tin cậy cho hàng ngàn khách hàng trên toàn quốc, cung cấp đa dạng các dòng xe Vinfast,Tesla, Hondam...v.v.</p>
+    <p>Sứ mệnh của chúng tôi: Không chỉ bán xe, chúng tôi bán sự an toàn và trải nghiệm tuyệt vời trên mọi hành trình.</p>
+  </div>
+  <div id="Sanpham" class="tabcontent">
+    <h1>Sản phẩm</h1>
+    <p>Chúng tôi cung cấp đa dạng các dòng xe từ các thương hiệu nổi tiếng như Vinfast, Tesla, Honda, Toyota, Ford, BMW, Audi, Mercedes-Benz và nhiều hãng khác. Mỗi chiếc xe đều được kiểm định chất lượng nghiêm ngặt trước khi đến tay khách hàng.</p>
+    <p>Khách hàng có thể dễ dàng tìm kiếm và so sánh các mẫu xe dựa trên tiêu chí như giá cả, tính năng, kiểu dáng và đánh giá từ người dùng khác. Chúng tôi cũng cung cấp các gói tài chính linh hoạt để giúp khách hàng sở hữu xe một cách dễ dàng hơn.</p>
+  </div>
+  <div id="Tuyendung" class="tabcontent">
+    <h1>Tuyển dụng</h1>
+    <p>Chúng tôi luôn tìm kiếm những tài năng mới để gia nhập đội ngũ của mình. Nếu bạn đam mê ngành công nghiệp ô tô và muốn phát triển sự nghiệp trong một môi trường năng động, hãy xem các vị trí tuyển dụng hiện có trên trang web của chúng tôi.</p>
+    <p>Chúng tôi cam kết tạo điều kiện làm việc tốt nhất cho nhân viên, với các chương trình đào tạo và phát triển kỹ năng liên tục.</p>
+  </div>
+
+<!-- Nút tab -->
+
+
+
+  <!--<main class="container py-4">
+    <div class="text-center">
+      <h2>Chào mừng đến với Xe Hơi Nhỏ</h2>
+      <p>Khám phá các dòng xe chất lượng với giá cả hợp lý.</p>
+      <a href="src/product/product.html" class="btn btn-primary mt-3">
+        <i class="fa-solid fa-car"></i> Xem sản phẩm
+      </a>
+    </div>
+  </main>
+  <footer class="bg-dark text-white text-center p-3 mt-4">
+    <small>© 2025 Xe Hơi Nhỏ. All rights reserved.</small>
+  </footer>-->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
