@@ -1,6 +1,5 @@
 main{
-    height: 3000px;
-}
+    height: 3000px;}
 section{
     padding:20px;
 }
@@ -266,8 +265,7 @@ footer .legal a{
 /* ... (phần code hiện tại của bạn) ... */
 
 /* Responsive cho mobile và tablet (<= 768px) */
-@media (min-width: 2500px) {
-  
+@media (min-width: 2500px) {  
   /* KHU VỰC XE HOT */
   .car_hot>div {
     width: 45%; /* Xếp 2 xe mỗi hàng */
@@ -314,13 +312,18 @@ footer .legal a{
     display: block;
   }
   aside {
-    flex-direction: column; /* Chuyên gia xếp dọc */
+    flex-direction: row;
     width: 95%;
     margin: 20px auto;
+
   }
   aside > div {
+    flex-direction: row;
     width: 100%; /* Mỗi chuyên gia chiếm full width */
-    margin-bottom: 20px;
+    height:99%;
+  }
+  aside>img{
+    height:100%;
   }
 
   /* KHU VỰC BEST CHOICE */
@@ -340,35 +343,143 @@ footer .legal a{
     flex-direction: column; /* Footer xếp dọc */
     height: auto;
     padding: 10px;
+    text-align:left;
+  }
+  footer  div {
+    width: 100%; /* Mỗi cột chiếm full width */
+    margin-top: 30px;
+    justify-content:center;
+    text-align: center;
+    align-items: center;
+  }
+  footer .contact-line {
+    text-align:center;
+  }
+  footer div img{
+    width:10%;
+    height:auto;
+  }
+}
+/* Responsive cho điện thoại nhỏ (<= 480px) */
+@media (max-width: 480px){
+  /* Khu vực xe hot */
+  article {
+    margin: 20px 0;
+  }
+  section>article>h1 {
+    font-size: 24px;
+    letter-spacing: 5px;
+  }
+  .car_hot>div {
+    width: 90%; 
+    display: block; /* Xếp chồng lên nhau */
+    margin: 20px auto;
+    text-align: center; /* Căn giữa nội dung trong mỗi div xe */
+  }
+  .car_hot div img {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    object-fit: cover;
+  }
+  .car_hot div .btn {
+      margin: 10px auto; /* Căn giữa nút */
+  }
+  
+  /* Khu vực Tư vấn & Chuyên gia (repulation) */
+  .repulation {
+    height: auto; /* Chiều cao tự động */
+    background-size: contain; /* Có thể dùng cover hoặc contain tùy theo ý muốn, nhưng contain sẽ tránh cắt ảnh */
+    background-position: top center;
+    flex-direction: column; /* Xếp chồng Form và Aside */
+    padding: 10px;
+    display: block;
+  }
+  form {
+    width: 95%; /* Chiếm gần hết chiều rộng */
+    height: auto;
+    margin: 20px auto; /* Căn giữa */
+    padding: 15px;
+    border: 5px solid transparent; /* Giảm độ dày border */
+  }
+  .form-group {
+    flex-direction: column; /* Label và input xếp chồng lên nhau */
+    align-items: flex-start;
+    margin-top: 10px;
+  }
+  .form-group label {
+    width: 100%;
+    height: auto;
+    margin-bottom: 5px;
+  }
+  .form-group input, .form-group textarea {
+    width: 100%; /* Chiếm full width */
+    box-sizing: border-box; 
+  }
+  form h4 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  form button {
+    margin: 10px auto 10px auto; /* Căn giữa nút */
+    display: block;
+    width: 150px;
+    padding: 15px;
+  }
+  
+  aside {
+    flex-direction: column; /* Chuyên gia xếp dọc */
+    width: 95%;
+    margin: 20px auto;
+    gap: 15px; /* Giảm khoảng cách giữa các khối chuyên gia */
+    display: flex; /* Giữ lại flex để stack */
+  }
+  aside > div {
+    width: 100%; /* Mỗi chuyên gia chiếm full width */
+    height: auto;
+    z-index:100000;
+  }
+
+  /* Khu vực Best Choice */
+  .best_choice {
+    height: auto;
+    padding-bottom: 30px;
+  }
+  .best_choice > div {
+    width: 90%; /* Mỗi khối chiếm full width */
+    height: auto;
+    margin: 20px auto;
+    display: block; /* Xếp chồng lên nhau */
+  }
+  .best_choice > h2 {
+      font-size: 24px;
+  }
+  .best_choice i {
+      font-size: 50px;
+  }
+  
+  /* Footer */
+  footer {
+    flex-direction: column; /* Footer xếp dọc */
+    height: auto;
+    padding: 10px 0;
+    margin-top: 50px;
     text-align: left;
   }
   footer > div {
-    width: 100%; /* Mỗi cột chiếm full width */
-    margin-top: 30px;
+    width: 95%; /* Mỗi cột chiếm gần full width */
+    margin: 20px auto;
     text-align: left;
   }
   footer .contact-line {
     justify-content: flex-start;
     margin-left: 0;
   }
+  footer .legal a{
+    line-height:30px;
+   }
   footer div img{
-    width:100%;
+    width:30%;
     height:auto;
   }
-}
-
-/* Responsive cho điện thoại nhỏ (<= 480px) */
-@media (max-width: 480px) {
-  /* Khu vực xe hot chỉ còn 1 xe/hàng */
-  .car_hot>div {
-    width: 90%; 
-    display: block; /* Xếp chồng lên nhau */
-    margin: 20px auto;
-  }
-  .car_hot div img {
-    width: 100%;
-    height: auto;
-    max-height: 250px;
-  }
-
 }
